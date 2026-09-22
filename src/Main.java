@@ -1,9 +1,18 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
     static ArrayList<Tarea> tareas = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
+    tareas.sort(Comparator.comparingInt(t -> {
+        switch (t.prioridad.toLowerCase()){
+            case "alta": return 1;
+            case "media"; return 2;
+            case "baja"; return 3;
+            default: return 4;
+        }
+    }
 
     public static void mostrarMenu(){
 
@@ -60,11 +69,21 @@ public class Main {
             System.out.println("No hay tareas todavía.\n");
             return;
         }
+        System.out.println("Filtrar tareas por prioridad?: ");
+        String filtrar = scanner.nextLine();
+        if (filtrar == "no") {
 
-        for (Tarea t : tareas) {
-            System.out.println(t);
+            for (Tarea t : tareas) {
+                System.out.println(t);
+            }
+            System.out.println();
+        } else if (filtrar == "si") {
+
+            for (tareas t : tareas) {
+                System.out.println(t);
+            }
+            System.out.println();
         }
-        System.out.println();
     }
 
     public static void marcarCompletada(){

@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Tarea {
 
     private static int contador = 1;
