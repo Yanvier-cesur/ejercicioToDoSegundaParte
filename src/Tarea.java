@@ -5,12 +5,22 @@ public class Tarea {
     private String descripcion;
     private boolean completada;
     private int id;
+    private String prioridad;
 
-    public Tarea(String descripcion, boolean completada) {
+    public Tarea(String descripcion, boolean completada, String prioridad) {
         this.descripcion = descripcion;
         this.completada = completada;
+        this.prioridad = prioridad;
         this.id = contador;
         contador++;
+    }
+
+    public String getPrioridad() {
+        return prioridad;
+    }
+
+    public void setPrioridad(String prioridad) {
+        this.prioridad = prioridad;
     }
 
     public int getID() {
@@ -33,8 +43,8 @@ public class Tarea {
         this.completada = completada;
     }
 
-    public void marcarCompletada(){
-        this.completada=true;
+    public void marcarCompletada() {
+        this.completada = true;
     }
 
     @Override
@@ -44,6 +54,7 @@ public class Tarea {
                 "ID=" + id +
                 ", descripcion='" + descripcion + '\'' +
                 ", completada=" + completadaCadena +
+                ", prioridad='" + prioridad + '\'' +
                 '}';
     }
 

@@ -46,7 +46,10 @@ public class Main {
         System.out.print("Escribe la descripción de la tarea: ");
         String descripcion = scanner.nextLine();
 
-        Tarea nueva = new Tarea(descripcion, false);
+        System.out.print("Escribe la prioridad de la tarea (alta,media o baja): ");
+        String prioridad = scanner.nextLine();
+
+        Tarea nueva = new Tarea(descripcion,false,prioridad);
         tareas.add(nueva);
 
         System.out.println("Tarea añadida con ID " + nueva.getID() + "\n");
