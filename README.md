@@ -20,8 +20,8 @@ Pequeña aplicacion para getionar lista de tareas desde la consola
 ## Modficiaciones
 
 - He creado la posibilidad de al añadir tarea poder asignarle una prioridad pudiendo escribir `alta, media o baja`.
+- En el segundo apartado he puesto que puedas filtrar por prioridad de alta a baja.
 
 ## Cosas por finalizar
 
-- Me he quedado por terminar el poder filtrarlos por prioridad.
 - Me falta poder guardarlo dentro de un archivo de texto.
